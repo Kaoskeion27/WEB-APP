@@ -1,0 +1,274 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct:145;
+}
+
+body{
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 540;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.container header .question {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.btn {
+    background-color: solid lightgray;
+    margin: 20px;
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.exit-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exit-btn:hover{
+    color: #fff;
+    background: gray;
+}
+
+.lets-go-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 250px;
+}
+
+.lets-go-btn:hover{
+    color: #fff;
+    background: rgb(120, 226, 120);
+}
+
+.btn:hover{
+    color: #fff;
+    background: #007bff;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    background-color: rgb(0, 197, 0);
+    color: white;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    background-color: rgb(240, 66, 66);
+    color: white;
+}
+
+
+.start-btn{
+    font-size: 25px;
+    font-weight: 500;
+    color: #007bff;
+    padding: 25px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: solid lightgrey;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover{
+    color: #fff;
+    background: #007bff;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.info-list {
+    padding: 20px;
+}
+
+.next-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 25%;
+    text-align: center;
+    margin: auto 110px auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.next-btn:hover{
+    color: #fff;
+    background: gray;
+}
+
+.question {
+    padding-bottom: 30px;
+}
+
+
+.complete_text {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #007bff;
+}
+.score_text {
+    text-align: center;
+    margin: 10px auto 10px;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.results-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 300px;
+}
+
+.results-btn:hover{
+    color: #fff;
+    background: gray;
+}
+
+.icon {
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 1-[x];
+}
+
+.restart-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 125px;
+}
+
+.restart-btn:hover{
+    color: #fff;
+    background: rgb(120, 226, 120);
+}
+
+.hide {
+    display: none;
+}
+
+
+.container header .timer {
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 45px;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
+.container header .timer .time_text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.container header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+}
